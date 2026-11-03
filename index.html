@@ -1,22 +1,262 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Management</title>
+    <title>Student Management System</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f7;
+            color: #333;
+        }
+
+        /* Navigation bar */
+        nav {
+            background-color: #1d3557;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            font-size: 22px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: #a8dadc;
+        }
+
+        /* Welcome section */
+        .hero {
+            min-height: 450px;
+            background: linear-gradient(135deg, #1d3557, #457b9d);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .buttons a {
+            display: inline-block;
+            padding: 13px 28px;
+            margin: 8px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .login-btn {
+            background-color: white;
+            color: #1d3557;
+        }
+
+        .register-btn {
+            background-color: #a8dadc;
+            color: #1d3557;
+        }
+
+        .buttons a:hover {
+            opacity: 0.85;
+        }
+
+        /* About section */
+        .about {
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        .about h2 {
+            color: #1d3557;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .about p {
+            max-width: 850px;
+            margin: auto;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Features section */
+        .features {
+            padding: 40px 8% 70px;
+            text-align: center;
+        }
+
+        .features h2 {
+            color: #1d3557;
+            margin-bottom: 35px;
+        }
+
+        .feature-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-card {
+            background-color: white;
+            padding: 30px 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .feature-card h3 {
+            color: #1d3557;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1d3557;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>STUDENT MANAGEMENT SYSTEM</h1>
+    <!-- Navigation -->
+    <nav>
+        <h2>Student Management</h2>
 
-    <p>
-        The Student Management System is a web-based application designed
-        to simplify and improve the management of student information.
-        It helps administrators store, organize, update, and retrieve
-        student records efficiently. The system aims to reduce manual
-        paperwork, save time, improve data accuracy, and make student
-        information management easier and more reliable
-    </p>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="registration.html">Register</a>
+        </div>
+    </nav>
+
+    <!-- Welcome section -->
+    <section class="hero">
+
+        <h1>Welcome to Student Management System</h1>
+
+        <p>
+            Manage student information easily, efficiently, and securely.
+            Our system provides a simple way to organize student records,
+            update personal information, and access important academic data.
+        </p>
+
+        <div class="buttons">
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="registration.html" class="register-btn">Get Started</a>
+        </div>
+
+    </section>
+
+    <!-- About section -->
+    <section class="about">
+
+        <h2>About Our System</h2>
+
+        <p>
+            The Student Management System is a web-based application designed
+            to simplify the administration of student information. It helps
+            educational institutions manage student records, reduce paperwork,
+            save time, improve data accuracy, and make information retrieval
+            faster and more reliable.
+        </p>
+
+    </section>
+
+    <!-- Features section -->
+    <section class="features">
+
+        <h2>Our Main Features</h2>
+
+        <div class="feature-container">
+
+            <div class="feature-card">
+                <h3>Student Registration</h3>
+                <p>
+                    Register new students and capture their personal
+                    information in an organized way.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Student Records</h3>
+                <p>
+                    Store and manage student information for easy
+                    access and future reference.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Easy Access</h3>
+                <p>
+                    Provide a simple interface that allows authorized
+                    users to access the system conveniently.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Student Management System. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
